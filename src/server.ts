@@ -35,9 +35,14 @@ import { filterImageFromURL, deleteLocalFiles } from './util/util';
   // Displays a simple message to the user
   app.get("/filteredimage", async (req, res) => {
     const { image_url } = req.query
-    const result = await filterImageFromURL(image_url)
-    await deleteLocalFiles([result])
-    res.send(result)
+    if (!image_url) res.send("Please Select Image First")
+    await filterImageFromURL(image_url).then(function (Image_Path: string) {
+      res.send(Image_Path)
+      res.on("finish", () => deleteLocalFiles([Image_Path]))
+    })
+    // const result = await filterImageFromURL(image_url)
+    // await deleteLocalFiles([result])
+    // res.send(result)
   });
 
 
