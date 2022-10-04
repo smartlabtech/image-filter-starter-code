@@ -26,7 +26,7 @@ We've included a few helper functions to handle some of these concepts and we're
 
 ### Beanstalk End Point
 
-http://michael-image-filter-starter-code-dev.us-east-1.elasticbeanstalk.com
+http://michael-image-filter-starter-code-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://nationaltoday.com/wp-content/uploads/2020/08/international-cat-day.jpg
 
 ### Github
 
