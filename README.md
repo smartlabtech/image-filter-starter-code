@@ -24,7 +24,13 @@ The starter code has a task for you to complete an endpoint in `./src/server.ts`
 
 We've included a few helper functions to handle some of these concepts and we're importing it for you at the top of the `./src/server.ts` file.
 
-<!-- http://michael-image-filter-starter-code-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://nationaltoday.com/wp-content/uploads/2020/08/international-cat-day.jpg -->
+### Beanstalk End Point
+
+http://michael-image-filter-starter-code-dev.us-east-1.elasticbeanstalk.com
+
+### Github
+
+https://github.com/smartlabtech/image-filter-starter-code
 
 ```typescript
 import {filterImageFromURL, deleteLocalFiles} from "./util/util"
