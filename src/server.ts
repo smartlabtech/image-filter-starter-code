@@ -33,11 +33,11 @@ import { filterImageFromURL, deleteLocalFiles } from './util/util';
 
   // Root Endpoint
   // Displays a simple message to the user
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage/", async (req: express.Request, res: express.Response) => {
     const { image_url } = req.query
-    if (!image_url) res.send("Please Select Image First")
+    if (!image_url) res.status(422).send("Please Select Image First")
     await filterImageFromURL(image_url).then(function (Image_Path: string) {
-      res.sendFile(Image_Path)
+      res.status(200).sendFile(Image_Path)
       res.on("finish", () => deleteLocalFiles([Image_Path]))
     })
     // const result = await filterImageFromURL(image_url)
