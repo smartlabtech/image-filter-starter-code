@@ -1,0 +1,7 @@
+### Beanstalk End Point
+
+http://michael-image-filter-starter-code-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://nationaltoday.com/wp-content/uploads/2020/08/international-cat-day.jpg
+
+### Github
+
+https://github.com/smartlabtech/image-filter-starter-code
