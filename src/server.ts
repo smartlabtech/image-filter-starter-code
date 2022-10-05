@@ -37,12 +37,12 @@ import { filterImageFromURL, deleteLocalFiles } from './util/util';
     const { image_url } = req.query
     if (!image_url) res.send("Please Select Image First")
     await filterImageFromURL(image_url).then(function (Image_Path: string) {
-      res.send(Image_Path)
+      res.sendFile(Image_Path)
       res.on("finish", () => deleteLocalFiles([Image_Path]))
     })
     // const result = await filterImageFromURL(image_url)
     // await deleteLocalFiles([result])
-    // res.send(result)
+    // res.sendFile(result)
   });
 
 
